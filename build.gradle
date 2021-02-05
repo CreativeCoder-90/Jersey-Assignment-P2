@@ -10,15 +10,17 @@ repositories {
     mavenCentral()
 }
 
+apply plugin: 'kotlin-kapt'
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     compile "org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.30"
     compile 'org.glassfish.jersey.inject:jersey-hk2:2.27'
-
+    implementation 'com.google.dagger:dagger:2.11'
+    kapt 'com.google.dagger:dagger-compiler:2.11'
     implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.32'
-
 }
 
 test {

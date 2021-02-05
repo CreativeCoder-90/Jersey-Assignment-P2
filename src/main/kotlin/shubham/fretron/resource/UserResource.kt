@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType
 import javax.ws.rs.core.Response
 
 @Path("/user/v1")
-class UserResource {
+open class UserResource {
     var userService = UserService()
     var objectMapper = ObjectMapper()
 
